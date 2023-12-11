@@ -7,7 +7,7 @@ Background:
     Given the following promotions
         | name                           | description                          | products_type | promotion_code     | require_code | start_date   | end_date     | is_active |
         | "First Time Shopper Discount"  | "Get 10% off your first purchase"    | "all_types"   | "first10%"         | true         |  2019-06-02  | 2023-08-28   | false     |
-        | "Holiday Sale"                 | "Big discounts for the holidays"     | "electronics" | "holidy"           | true        |  2023-11-15  | 2023-12-25   | true      |
+        | "Holiday Sale"                 | "Big discounts for the holidays"     | "electronics" | "holidy"           | true         |  2023-11-15  | 2023-12-25   | true      |
         | "Clearance Special"            | "Clearance items at great prices"    | "clothing"    | "clearance2023"    | true         |  2023-09-01  | 2023-12-31   | true      |
         | "Cyber Monday Sale"            | "Big discounts for the CyberMonday"  | "all_types"   | "cybermonday2023"  | true         |  2023-11-20  | 2023-11-30   | true      |
 
@@ -41,7 +41,6 @@ Scenario: Create a promotion
 
 Scenario: Query a promotion using its status
     When I visit the "Home Page"
-    And I set the "id" to "9"
     And I select "True" in the "is_active" dropdown
     And I press the "Search" button
     Then I should see the message "Success"
