@@ -91,16 +91,17 @@ Scenario: Clear
 
 Scenario: delete a promotion
     When I visit the "Home Page"
+    And I set the "id" to "9"
     And I set the "name" to "First Time Shopper Discount"
     And I press the "Search" button
     Then I should see the message "Success"
-    And I should see "First Time Shopper Discount" in the "name" field
-    And I should see "Get 10% off your first purchase" in the "description" field
-    And I should see "all_types" in the "products_type" field
-    And I should see "first10%" in the "promotion_code" field
+    And I should see "First Time Shopper Discount" in the "name" results
+    And I should see "Get 10% off your first purchase" in the "description" results
+    And I should see "all_types" in the "products_type" results
+    And I should see "first10%" in the "promotion_code" results
     And I should see "true" in the "require_code" dropdown
-    And I should see "2019-06-02" in the "start_date" field
-    And I should see "2023-08-28" in the "end_date" field
+    And I should see "2019-06-02" in the "start_date" results
+    And I should see "2023-08-28" in the "end_date" results
     And I should see "false" in the "is_active" dropdown
     When I press the "Delete" button
     Then I should see the message "Promotion has been Deleted!"
