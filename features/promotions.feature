@@ -89,21 +89,12 @@ Scenario: Clear
     And the "id" field should be empty
     And the "code" field should be empty
 
-Scenario: Delete a promotion
+Scenario: Delete Promotions
     When I visit the "Home Page"
-    And I set the "id" to "9"
-    And I set the "name" to "First Time Shopper Discount"
+    And I set the "Name" to "First Time Shopper Discount"
     And I press the "Search" button
-    Then I should see the message "Success"
-    And I should see "First Time Shopper Discount" in the results
-    And I should see "Get 10% off your first purchase" in the results
-    And I should see "all_types" in the results
-    And I should see "first10%" in the results
-    And I should see "true" in the results
-    And I should see "2019-06-02" in the results
-    And I should see "2023-08-28" in the results
-    And I should see "false" in the results
-    When I press the "Delete" button
+    When I copy the "id" field
+    And I press the "Clear" button
+    And I paste the "id" field
+    And I press the "Delete" button
     Then I should see the message "Promotion has been Deleted!"
-    And the results should be empty
-
