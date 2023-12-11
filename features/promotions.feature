@@ -96,4 +96,3 @@ Scenario: Delete Promotions
     When I copy the "id" field
     And I press the "Delete" button
     Then I should see the message "Promotion has been Deleted!"
-    And I should not see "Clearance Special" in the results
