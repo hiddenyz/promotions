@@ -89,12 +89,12 @@ Scenario: Clear
     And the "id" field should be empty
     And the "code" field should be empty
 
-Scenario: List specific criteria promotions
+Scenario: Query a promotion using its status
     When I visit the "Home Page"
-    And I set the "products_type" to "all_types"
+    And I select "True" in the "is_active" dropdown
     And I press the "Search" button
     Then I should see the message "Success"
-    And I should see "First Time Shopper Discount" in the results
     And I should see "Holiday Sale" in the results
-    And I should not see "Cyber Monday Sale" in the results
-    And I should not see "Clearance Special" in the results
+    And I should see "Clearance Special" in the results
+    And I should see "Cyber Monday Sale" in the results
+    And I should not see "First Time Shopper Discount" in the results
