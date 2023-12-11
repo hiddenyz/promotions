@@ -91,10 +91,9 @@ Scenario: Clear
 
 Scenario: Delete Promotions
     When I visit the "Home Page"
-    And I set the "Name" to "First Time Shopper Discount"
+    And I set the "Name" to "Clearance Special"
     And I press the "Search" button
     When I copy the "id" field
-    And I press the "Clear" button
-    And I paste the "id" field
     And I press the "Delete" button
     Then I should see the message "Promotion has been Deleted!"
+    And I should not see "Clearance Special" in the results
