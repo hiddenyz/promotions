@@ -91,7 +91,7 @@ Scenario: Clear
 
 Scenario: List specific criteria promotions
     When I visit the "Home Page"
-    And I set the "products_type" to "all_types"
+    And I set the "products_type" to "clothing"
     And I press the "Search" button
     Then I should see the message "Success"
     And I should see "First Time Shopper Discount" in the results
