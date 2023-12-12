@@ -121,7 +121,7 @@ Scenario: Read a Promotion
 Scenario: Query a promotion using its type 
    When I visit the "Home Page" 
    And I set the "id" to "12" 
-   And I select "true" to "require_code" dropdown
+   And I set the "code" to "all"
    And I press the "Search" button 
    Then I should see the message "Success" 
    And I should see "First Time Shopper Discount" in the results
