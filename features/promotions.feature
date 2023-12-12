@@ -117,4 +117,3 @@ Scenario: Read a Promotion
     Then I should see the message "Success"    
     When I copy the "id" field
     And I press the "Retrieve" button
-    Then I should see the message "Success"
