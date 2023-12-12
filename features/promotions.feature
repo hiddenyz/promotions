@@ -41,6 +41,7 @@ Scenario: Create a promotion
 
 Scenario: Query a promotion using its status
     When I visit the "Home Page"
+    And I set the id to "11"
     And I select "True" in the "is_active" dropdown
     And I press the "Search" button
     Then I should see the message "Success"
