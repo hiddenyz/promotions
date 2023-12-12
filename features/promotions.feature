@@ -117,3 +117,11 @@ Scenario: Read a Promotion
     Then I should see the message "Success"    
     When I copy the "id" field
     And I press the "Retrieve" button
+
+Scenario: Query a promotion using its type 
+   When I visit the "Home Page" 
+   And I set the "id" to "11" 
+   And I set the "products_type" to "all_types" 
+   And I press the "Search" button 
+   Then I should see the message "Success" 
+   And I should see "First Time Shopper Discount" in the results
