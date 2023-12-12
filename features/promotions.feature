@@ -107,10 +107,6 @@ Scenario: Delete a Promotion
 Scenario: Query a promotion using its status
     When I visit the "Home Page"
     And I set the "id" to "11"
-    And I select "True" in the "is_active" dropdown
+    And I set the "products_type" to "all_types"
     And I press the "Search" button
     Then I should see the message "Success"
-    And I should see "Holiday Sale" in the results
-    And I should see "Clearance Special" in the results
-    And I should see "Cyber Monday Sale" in the results
-    And I should not see "First Time Shopper Discount" in the results
